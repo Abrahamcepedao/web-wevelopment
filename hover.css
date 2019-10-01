@@ -1,0 +1,194 @@
+
+.process{
+	position: relative;
+	z-index: 200;
+	width: 100%;
+	height: 2000px;
+	background: black;
+	size: cover;
+	color: white;
+	text-align: center;
+	background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.process_t span{
+	position: relative;
+	width: 25%;
+	height: 1px;
+	max-width: 150px;
+	background: white;
+	display: inline-block;
+}
+
+.process_t{
+	margin: auto;
+	width: 100%;
+	height: 200px;
+	font-size: 1em;
+	font-family: 'Vast Shadow';
+}
+.process_t h2{
+	margin-top: 0px;
+	margin-bottom: -10px;
+}
+.process2{
+	width: 100%;
+	height: 500px;
+	background: red;
+	margin-top: 30px;
+}
+.text_process{
+	position: relative;
+	margin: auto;
+	width: 200px;
+	height: 400px;
+	margin-top: 50px;
+	background-color: gray;
+	text-align: center;
+	cursor: pointer;
+	display: inline-block;
+}
+.text_process h1{
+	position: relative;
+	margin-top: 90px;
+	font-size: 30px;
+	color: black;
+	display: show;
+	transform: translateY(0px);
+	transition-property: transform;
+	transition-duration: .3s;
+	transition-timing-function: ease-out;
+}
+.text_process:hover h1{
+	transform: translateY(-10px);
+}
+
+.phone1{
+	position: relative;
+	left: 6px;
+	margin-top: 20px;
+	font-size: 140px;
+	color: white;
+	z-index: 30;
+	transition-property: color;
+	transition-duration: .3s;
+	transition-timing-function: ease-out;
+}
+.text_process:hover .phone1{
+	color: red;
+}
+
+
+.phone{
+	margin-top: 20px;
+	font-size: 140px;
+	color: white;
+	z-index: 30;
+	transition-property: color;
+	transition-duration: .3s;
+	transition-timing-function: ease-out;
+}
+.text_process:hover .phone{
+	color: red;
+}
+
+.box{
+	position: relative;
+	margin: auto;
+	margin-top: -140px;
+	width: 100px;
+	height: 100px;
+	background: none;
+	border: 6px solid red;
+	z-index: 20;
+	transform: rotate(45deg);
+	transition-property: border, transform;
+	transition-duration: .3s;
+	transition-timing-function: ;
+}
+
+.text_process:hover .box{
+	border: 6px solid white;
+	transform: rotate(135deg);
+}
+/*.text{
+	position: relative;
+	margin: auto;
+	width: 200px;
+	height: 400px;
+	background-color: gray;
+	text-align: center;
+	cursor: pointer;
+	display: inline-block;
+}
+.text h1{
+	font-size: 30px;
+	color: black;
+	transform: translateY(0px);
+	transition-property: transform;
+	transition-duration: .3s;
+	transition-timing-function: ease-out;
+}
+.text:hover h1{
+	transform: translateY(-10px);
+}
+
+.phone1{
+	position: relative;
+	left: 6px;
+	margin-top: 20px;
+	font-size: 140px;
+	color: white;
+	z-index: 30;
+	transition-property: color;
+	transition-duration: .3s;
+	transition-timing-function: ease-out;
+}
+.text:hover .phone1{
+	color: red;
+}
+
+
+.phone{
+	margin-top: 20px;
+	font-size: 140px;
+	color: white;
+	z-index: 30;
+	transition-property: color;
+	transition-duration: .3s;
+	transition-timing-function: ease-out;
+}
+.text:hover .phone{
+	color: red;
+}
+
+.box{
+	position: relative;
+	margin: auto;
+	margin-top: -140px;
+	width: 100px;
+	height: 100px;
+	background: none;
+	border: 6px solid red;
+	z-index: 20;
+	transform: rotate(45deg);
+	transition-property: border, transform;
+	transition-duration: .3s;
+	transition-timing-function: ;
+}
+
+.text:hover .box{
+	border: 6px solid white;
+	transform: rotate(135deg);
+}
+
+
+
+
+
+
+
+
+
