@@ -1,0 +1,287 @@
+body{
+	background: rgb(240,240,240);
+}
+
+.box{
+	display: inline-block;
+	margin: 50px 20px;
+	width: 200px;
+	height: 200px;
+	position: relative;
+	color: rgb(240,240,240);
+}
+
+.box > div{
+	border: 2px solid navy;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+
+}
+
+.front{
+	opacity: 1;
+	box-shadow: inset 0px 2px 20px crimson;
+}
+.back{
+	background: navy;
+	-webkit-transform: translateZ(-100px)
+						rotateY(90deg);
+	left: 100px;
+}
+.box{
+	transition-duration: 0.5s;
+	transform-style: preserve-3d;
+	transform-origin: left center;
+}
+.box:hover{
+	-webkit-transform: perspective(800px)
+						rotateY(-80deg);
+}
+
+.box:hover .front{
+	opacity: 1;
+}
+
+.back h1{
+	margin: 0px;
+	width: 90%;
+	margin-left: 5%;
+	border-bottom: 3px solid crimson; 
+	text-align: center;
+}
+
+.back p{
+	width: 90%;
+	margin-left: 5%
+}
+
+.content{
+	margin: 40px;
+	width: 200px;
+	height: 200px;
+	background: url("mundo2.png");
+	border-radius: 60%;
+	-webkit-animation: rotate 10s infinite linear;
+	box-shadow: -5px 5px 15px rgb(40,40,40);
+	box-shadow: inset 10px 50% 50px black;
+
+}
+
+
+
+@-webkit-keyframes rotate{
+	0%{
+		background-position: 0px 0px;
+	}
+	100%{
+		background-position: -320px 0px;
+	}
+}
+
+p.holatexto{
+	text-align: center;
+	font-size: 40px;
+	color: navy;
+	/*text-shadow: 2px 0px 0px black*/
+}
+p.texto3d{
+	text-align: center;
+	font-size: 40px;
+	color: navy;
+	text-shadow: 	-1px 1px 0px black,
+					-2px 2px 0px black,
+					-3px 3px 0px black,
+					-4px 4px 0px black,
+					-5px 5px 0px black;
+}
+
+.contenedor{
+	perspective: 1000px;
+	perspective-origin: 50% 50%; 
+}
+.cubo{
+	transform-style: preserve-3d;
+	transform: rotateY(-30deg);
+	margin: 200px auto;
+}
+
+.cubo, .cubo > div{
+	height: 290px;
+	width: 290px;
+}
+.cara:before{
+	position: absolute;
+	content: '';
+	height: 100%;
+	width: 95.33px;
+	left: 96.33px;
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+}
+.cara:after{
+	position: absolute;
+	content: '';
+	height: 95.33px;
+	width: 100%;
+	top: 96.33px;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+}
+
+.cara{
+	position: absolute;
+	border: 5px solid black;
+	opacity: 0.5;
+}
+.cubo .cara:nth-child(1){
+	background: red;
+	transform: translateZ(150px);
+}
+.cubo .cara:nth-child(2){
+	background: green;
+	transform: translateZ(-150px);
+}
+.cubo .cara:nth-child(3){
+	background: blue;
+	transform: translateX(-150px)
+				rotateY(-90deg);
+}
+.cubo .cara:nth-child(4){
+	background: orange;
+	transform: translateX(150px)
+				rotateY(-90deg);
+}
+.cubo .cara:nth-child(5){
+	background: yellow;
+	transform: translateY(-150px)
+				rotateX(-90deg);
+}
+.cubo .cara:nth-child(6){
+	background: white;
+	transform: translateY(150px)
+				rotateX(-90deg);
+}
+
+.cubo{
+	animation: giro 20s infinite linear;
+}
+
+@-webkit-keyframes giro{
+	0%{
+		transform: rotateX(-45deg)
+					rotateY(0deg);
+	}
+	50%{
+		transform: rotateX(45deg)
+					rotateY(360deg);
+	}
+	100%{
+		transform: rotateX(-45deg)
+					rotateY(720deg);
+	}
+}
+
+
+#piramide{
+	position: relative;
+	margin: 80px auto;
+	height: 500px;
+	width: 100px;
+	-webkit-transform-style: preserve-3d;
+	-webkit-transform-origin: 116px 200px 116px;
+	-webkit-transform: rotateY(30deg);
+	-webkit-animation: 10s giroDos infinite linear;
+}
+#piramide > div{
+	position: absolute;
+	border-style: solid;
+	border-width: 200px 0px 200px 346px;
+	-webkit-transform-origin: 0 0;
+}
+
+#piramide > div:nth-child(1){
+	border-color: transparent
+					transparent
+					transparent
+					rgba(0,0,0, 0.8);
+	
+	-webkit-transform:rotateX(-60deg)
+						rotateY(19.5deg)
+						translateX(-116px)
+						translateY(-200px)
+						translateZ(326px);
+}
+#piramide > div:nth-child(2){
+	border-color: transparent
+					transparent
+					transparent
+					rgba(255,0,0, 0.8);
+	
+	-webkit-transform: rotateY(-19.5deg)
+						rotateX(180deg)
+						translateY(-400px);
+}
+#piramide > div:nth-child(3){
+	border-color: transparent
+					transparent
+					transparent
+					rgba(0,255,0, 0.8);
+	
+	-webkit-transform:rotateY(90deg)
+						rotateZ(60deg)
+						rotateX(180deg)
+						translateY(-400px);
+}
+#piramide > div:nth-child(4){
+	border-color: transparent
+					transparent
+					transparent
+					rgba(0,0,255,0.8);
+	-webkit-transform: rotateX(60deg)
+						rotateY(19.5deg);
+}
+
+@-webkit-keyframes giroDos{
+	from{
+		-webkit-transform: rotateX(0deg)
+							rotateY(0deg)
+							rotateZ(0deg);
+	}
+	to{
+		-webkit-transform: rotateX(360deg)
+							rotateY(360deg)
+							rotateZ(360deg);
+	}
+}
+
+.parallax { 
+    /* The image used */
+    background-image: url("franja.jpg");
+
+    /* Set a specific height */
+    height: 500px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
